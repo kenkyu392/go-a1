@@ -25,7 +25,7 @@ func Itoa(i int) (string, error) {
 	var i2 int
 	for i > 0 {
 		i2 = (i - 1) % 26
-		s = string(i2+65) + s
+		s = string(rune(i2+65)) + s
 		i = (i - i2) / 26
 	}
 	return s, nil
